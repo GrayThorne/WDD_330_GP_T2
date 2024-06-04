@@ -1,0 +1,105 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero{
+    display: grid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+
+    .banner-img{
+        grid-area: 1/2/4/3;
+        max-height: 100%;
+        z-index: -1;
+        @include box-shad;
+    }
+
+    h1{
+        padding-top: 70px;
+        color: $accent1-color;
+        grid-area: 1/2/2/3;
+        font-family: $heading-font;
+        text-align: center;
+        background-color: $primary-opat;
+    }
+    p{
+        padding: 60px;
+        color: $accent-text;
+        font-family: $para-font;
+        font-size: 18px;
+        grid-area: 2/2/3/3;
+        background-color: $second-opat;
+    }
+}
+
+.post-form{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    position: relative;
+
+    &:hover .post-field{
+        height: 100%;
+    }
+    
+   
+    .post-field{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: center;
+        @include overlay;
+
+        ul{
+            list-style: none;
+        }
+
+        textarea{
+            width: 800px;
+            height: 150px;
+            background-color: $primary-color;
+            color: $accent1-color;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .button{
+            width: 90px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: $secondary-color;
+            color: $accent1-color;
+        }
+    }
+    .post-back{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        z-index: -1;
+        @include box-shad;
+    }
+}
+
+.posts{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 150px auto;
+    margin-top: 30px;
+    background-color: $primary-opat;
+    color: $accent1-color;
+
+    .posted{
+        grid-column: 2/3;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .hero{
+        display: block;
+    }
+    .banner-img{
+        max-width: 100%;
+    }
+    .post-form, .leather-wallet, .post-field, #message-post{
+        display: block;
+        max-width: 100%;
+    }
+}
