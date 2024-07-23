@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css"> 
     <title>Rock Leather Community</title>
+    <script src="js/forum.js"></script>
 </head>
 <body>
     <div class="content">
@@ -31,7 +32,7 @@
                 <div class="post-back">
                     <img class="leather-wallet" src="./images/leather-wallet.jpg" alt="leather wallet">
                 </div>
-                <form class="post-field">
+                <!-- <form class="post-field">
                     <ul>
                         <li><textarea id="message-post" placeholder="Write your post here..."></textarea>
                         </li>    
@@ -39,22 +40,36 @@
                             <button class="button">Post</button>
                         </li>        
                     </ul> 
-                </form>   
+                </form>    -->
             </section>
             <section class="posts">
-                <div class="posted">
+                <!-- <div class="posted">
                     <h4 class="name">Nate Funk</h4>
                     <p class="post-content">
                         I just recently made a tablet cover. 
                         Been thinking about making a shealth, what tips can everyone give me.
                     </p>
+                </div> -->
+                <div id="forum-container">
+                    <h1>Talk to others for you leathercraft journay</h1>
+        
+        <!-- Thread List -->
+        <div id="thread-list">
+            <!-- Threads will be dynamically added here -->
+        </div>
+
+        <!-- New Thread Form -->
+        <form id="new-thread-form">
+            <input type="text" id="thread-title" placeholder="Enter thread title" required>
+            <textarea id="thread-content" placeholder="Enter thread content" rows="4" required></textarea>
+            <button type="submit">Create Thread</button>
+        </form>
                 </div>
             </section>
 
         </main>
         <footer>
             <p>Rock Leather &copy; 2022 - Nate Funk</p>
-            <p><a href="site-plan.html">Site Plan</a></p>
             <div class="social">
                 <a href="https://facebook.com" target="_blank">
                     <img src="images/facebook.png" alt="fb icon">
